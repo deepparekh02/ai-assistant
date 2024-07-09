@@ -26,7 +26,7 @@ class EmailHandler:
         service = build('gmail', 'v1', credentials=creds)
         return service
 
-    def read_emails(self, hours):
+    def read_emails(self, hours=24):
         hours_ago = (datetime.now() - timedelta(hours=hours)).strftime('%Y/%m/%d')
         query = f'is:unread after:{hours_ago}'
         results = self.service.users().messages().list(userId='me', labelIds=['INBOX'], q=query).execute()

@@ -36,14 +36,3 @@ class SlackHandler:
         except SlackApiError as e:
             print(f"Error fetching messages: {e.response['error']}")
             return []
-
-    def create_draft(self, channel, text):
-        try:
-            response = self.client.chat_postMessage(
-                channel=channel,
-                text=text,
-                as_user=True
-            )
-            return response
-        except SlackApiError as e:
-            print(f"Error creating draft: {e.response['error']}")

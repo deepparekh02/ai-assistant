@@ -8,7 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 SLACK_USER_ID = os.getenv('SLACK_USER_ID')
 
-def main(hours=24):
+def main(hours=None):
+    if hours is None:
+        hours = 24
+        
     email_handler = EmailHandler()
     slack_handler = SlackHandler()
     
@@ -28,8 +31,7 @@ def main(hours=24):
             email_handler.create_draft("Re: " + subject, response, from_email)
     
     email_summary = summarize_emails(email_contents)
-    print(email_summary)
-    # email_handler.send_email("Daily Email Summary", email_summary, 'deep.parekh02@gmail.com')
+    email_handler.send_email("Daily Email Summary", email_summary, 'deep.parekh02@gmail.com')
     
     
     channels = slack_handler.get_channels()
@@ -38,10 +40,10 @@ def main(hours=24):
     for channel in channels:
         messages = slack_handler.read_messages(channel['id'], channel['name'], hours=hours)
         slack_contents.extend(messages)
-
+        
     slack_summary = summarize_channels(slack_contents)
-    print(slack_summary)
-    # email_handler.send_email("Daily Slack Summary", slack_summary, 'deep.parekh02@gmail.com')
+    email_handler.send_email("Daily Slack Summary", slack_summary, 'deep.parekh02@gmail.com')
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process some integers.')
