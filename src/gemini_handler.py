@@ -16,3 +16,7 @@ def summarize_emails(emails):
     response = model.generate_content(["Summarize these emails for me and highlight anything crucial", email_texts])
     return response.text
 
+def summarize_channels(messages):
+    message_texts = "\n\n".join(messages)
+    response = model.generate_content(["For each channel, give me a summary of all the messages and highlight anything crucial", message_texts])
+    return response.text
