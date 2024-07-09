@@ -1,4 +1,4 @@
-# AI Assistant for Emails and Slack Messages
+# AI Assistant for Communication
 
 ### Table of Contents
 - Description
