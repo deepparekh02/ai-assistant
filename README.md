@@ -9,7 +9,7 @@
 
 ### Description
 
-This project is an AI Assistant that utilizes the Gemini AI to generate summaries for emails and Slack messages. It also drafts responses to emails, helping users manage their communications more efficiently. The assistant periodically performs these tasks using credentials from a .env file, ensuring user data privacy and security.
+This project is an AI Assistant that utilizes the Gemini AI to generate summaries for emails and Slack messages. It also drafts responses to emails, helping users manage their communications more efficiently. The assistant periodically performs these tasks using credentials from a .env file, and sends emails to you every desired time interval to keep you updated.
 
 ### Inspiration
 
