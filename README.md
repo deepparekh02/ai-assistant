@@ -34,15 +34,15 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
 
 ### Main Features
 
-1) Advanced Email Summarization: 
+1) **Advanced Email Summarization**: 
 Utilizes Gemini AI to generate insightful and concise summaries of email threads using sophisticated prompt engineering techniques.
-2) Intelligent Slack Summarization: 
+2) **Intelligent Slack Summarization**: 
 Produces comprehensive summaries of Slack conversations, ensuring users stay updated without reading every message.
-3) AI-Driven Email Response Drafting: 
+3) **AI-Driven Email Response Drafting**: 
 Employs machine learning algorithms to draft contextually relevant email responses, tailored to user preferences and communication style.
-4) Automated and Secure Workflow: 
+4) **Automated and Secure Workflow**: 
 Periodically performs tasks using credentials securely stored in a .env file, ensuring data privacy and continuous operation.
-5) Seamless AI API Integration: 
+5) **Seamless AI API Integration**: 
 Integrates with Google Generative AI APIs to harness the full potential of LLMs for natural language understanding and generation.
 
 
