@@ -1,4 +1,4 @@
-# AI Assistant for Communication
+# Briefly AI
 
 <img src="https://github.com/deepparekh02/ai-assistant/assets/65657471/00888051-d86e-4562-9eb2-dfc90bf3402c" width=400>
 
