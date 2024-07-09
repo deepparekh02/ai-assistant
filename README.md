@@ -1,6 +1,6 @@
 # AI Assistant for Communication
 
-[image](https://github.com/deepparekh02/ai-assistant/assets/65657471/9223c9e5-6aff-43c1-aa63-852601a58330)
+![Gemini_Generated_Image_fa8uukfa8uukfa8u](https://github.com/deepparekh02/ai-assistant/assets/65657471/00888051-d86e-4562-9eb2-dfc90bf3402c)
 
 
 ### Table of Contents
