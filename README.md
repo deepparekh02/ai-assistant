@@ -2,6 +2,7 @@
 
 ### Table of Contents
 - Description
+- Inspiration
 - Technologies and Libraries
 - Main Features
 - Installation
@@ -15,22 +16,28 @@ This project is an AI Assistant that utilizes the Gemini AI to generate summarie
 
 ### Technologies and Libraries
 
-Python
-google-auth
-google-auth-oauthlib
-google-auth-httplib2
-google-api-python-client
-python-dotenv
-google-generativeai
-slack-sdk
+- Python
+-- Google Cloud APIs for seamless integration and authentication:
+--- google-auth
+--- google-auth-oauthlib
+--- google-auth-httplib2
+--- google-api-python-client
+-- Environment Management:
+--- python-dotenv
+-- AI and Machine Learning:
+--- google-generativeai for leveraging state-of-the-art LLMs
+-- Communication Platform Integration:
+--- slack-sdk
 
 ### Main Features
 
-1) Email Summarization:
-Uses Gemini AI to generate concise summaries of email threads and to bring up anything crucial.
-2) Slack Summarization:
-Generates summaries of Slack messages in each channel to keep users updated and highlight tasks of urgency
-3) Drafting Email Responses:
-Prepares and puts draft responses in your inbox based on the context of the sender's email and personal user preferences.
-4) Automated Workflow:
-Performs periodic tasks using credentials stored in a .env file.
+1) Advanced Email Summarization: 
+Utilizes Gemini AI to generate insightful and concise summaries of email threads using sophisticated prompt engineering techniques.
+2) Intelligent Slack Summarization: 
+Produces comprehensive summaries of Slack conversations, ensuring users stay updated without reading every message.
+3) AI-Driven Email Response Drafting: 
+Employs machine learning algorithms to draft contextually relevant email responses, tailored to user preferences and communication style.
+4) Automated and Secure Workflow: 
+Periodically performs tasks using credentials securely stored in a .env file, ensuring data privacy and continuous operation.
+5) Seamless AI API Integration: 
+Integrates with Google Generative AI APIs to harness the full potential of LLMs for natural language understanding and generation.
