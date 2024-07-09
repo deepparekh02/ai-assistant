@@ -1,5 +1,7 @@
 # AI Assistant for Communication
 
+https://files.oaiusercontent.com/file-0acmjATOFp1powVMwJTF21TO?se=2024-07-09T10%3A36%3A53Z&sp=r&sv=2023-11-03&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D89163bc5-00e5-46e9-8351-20d3b4b797c9.webp&sig=cypxWDdzx6/n0CS0I1el9n0NHRFk6VOHYSQaxD0tp7M%3D![image](https://github.com/deepparekh02/ai-assistant/assets/65657471/3e5ace13-5b18-4f38-83ac-04aee1a75fd6)
+
 ### Table of Contents
 - Description
 - Inspiration
