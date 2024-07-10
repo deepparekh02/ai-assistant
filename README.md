@@ -66,7 +66,7 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
 
 - Add Discord Support.
 - Add Whatsapp Business Support.
-- Add Add Microsoft Teams Support.
+- Add Microsoft Teams Support.
 
 ## How to Use
 
