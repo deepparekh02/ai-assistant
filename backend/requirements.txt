@@ -5,3 +5,5 @@ google-api-python-client
 python-dotenv
 google-generativeai
 slack-sdk
+flask
+flask-cors

@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Summary Generator</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="googleClientId">Google Client ID</label>
+        <input type="text" id="googleClientId" [(ngModel)]="tokens.googleClientId" name="googleClientId" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="googleClientSecret">Google Client Secret</label>
+        <input type="text" id="googleClientSecret" [(ngModel)]="tokens.googleClientSecret" name="googleClientSecret" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="googleRefreshToken">Google Refresh Token</label>
+        <input type="text" id="googleRefreshToken" [(ngModel)]="tokens.googleRefreshToken" name="googleRefreshToken" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="slackUserToken">Slack User Token</label>
+        <input type="text" id="slackUserToken" [(ngModel)]="tokens.slackUserToken" name="slackUserToken" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="slackUserId">Slack User ID</label>
+        <input type="text" id="slackUserId" [(ngModel)]="tokens.slackUserId" name="slackUserId" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="hours">Last Number of Hours</label>
+        <input type="number" id="hours" [(ngModel)]="hours" name="hours" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Get Summary</button>
+    </form>
+  
+    <div *ngIf="summary" class="summary mt-5">
+      <h2 class="text-center">Email Summary</h2>
+      <markdown [data]="emailSummary"></markdown>
+  
+      <h2 class="text-center mt-5">Slack Summary</h2>
+      <markdown [data]="slackSummary"></markdown>
+    </div>
+  </div>
+  
