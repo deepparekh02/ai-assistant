@@ -7,10 +7,9 @@
 - [Inspiration](#inspiration)
 - [Technologies and Libraries](#technologies-and-libraries)
 - [Main Features](#main-features)
+- [Demo](#demo)
 - [How to Use](#how-to-use)
 - [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 
@@ -58,7 +57,7 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
 
 ## How to Use
 
-1. **Enter your credentials:** Input your Google and Slack credentials securely into the `.env` file.
+1. **Enter your credentials:** Input your Google and Slack credentials securely into form.
 2. **Specify the time range:** Define the number of hours for which you want to generate summaries.
 3. **Generate Summaries:** Click on the respective buttons to generate email or Slack summaries.
 4. **Draft Responses:** Use the AI-driven drafting feature to automatically generate email responses.
@@ -84,15 +83,7 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
     ```bash
     pip install -r requirements.txt
     ```
-4. Create a `.env` file in the backend directory and add your credentials:
-    ```plaintext
-    GOOGLE_CLIENT_ID=your-google-client-id
-    GOOGLE_CLIENT_SECRET=your-google-client-secret
-    GOOGLE_REFRESH_TOKEN=your-google-refresh-token
-    SLACK_USER_TOKEN=your-slack-user-token
-    SLACK_USER_ID=your-slack-user-id
-    ```
-
+    
 5. Run the backend server:
     ```bash
     python app.py
