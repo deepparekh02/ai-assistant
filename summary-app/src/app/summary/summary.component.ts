@@ -20,18 +20,32 @@ export class SummaryComponent {
     slackUserId: ''
   };
   hours: number = 24;
-  summary: any;
   emailSummary: string = '';
   slackSummary: string = '';
+  draftSummary: any;
+  draftMessage: string = '';
 
   constructor(private summaryService: SummaryService) { }
 
-  onSubmit(): void {
-    this.summaryService.getSummary(this.tokens, this.hours).subscribe(
+  getEmailSummary(): void {
+    this.summaryService.getEmailSummary(this.tokens, this.hours).subscribe(
+      data => this.emailSummary = data.email_summary,
+      error => console.error(error)
+    );
+  }
+
+  getSlackSummary(): void {
+    this.summaryService.getSlackSummary(this.tokens, this.hours).subscribe(
+      data => this.slackSummary = data.slack_summary,
+      error => console.error(error)
+    );
+  }
+
+  draftResponseEmails(): void {
+    this.summaryService.draftResponseEmails(this.tokens, this.hours).subscribe(
       data => {
-        this.summary = data;
-        this.emailSummary = data.email_summary;
-        this.slackSummary = data.slack_summary;
+        this.draftMessage = data.message;
+        this.draftSummary = data.drafts;
       },
       error => console.error(error)
     );

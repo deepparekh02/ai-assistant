@@ -1,39 +1,80 @@
 <div class="container">
-    <h1>Summary Generator</h1>
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="googleClientId">Google Client ID</label>
-        <input type="text" id="googleClientId" [(ngModel)]="tokens.googleClientId" name="googleClientId" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="googleClientSecret">Google Client Secret</label>
-        <input type="text" id="googleClientSecret" [(ngModel)]="tokens.googleClientSecret" name="googleClientSecret" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="googleRefreshToken">Google Refresh Token</label>
-        <input type="text" id="googleRefreshToken" [(ngModel)]="tokens.googleRefreshToken" name="googleRefreshToken" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="slackUserToken">Slack User Token</label>
-        <input type="text" id="slackUserToken" [(ngModel)]="tokens.slackUserToken" name="slackUserToken" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="slackUserId">Slack User ID</label>
-        <input type="text" id="slackUserId" [(ngModel)]="tokens.slackUserId" name="slackUserId" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="hours">Last Number of Hours</label>
-        <input type="number" id="hours" [(ngModel)]="hours" name="hours" class="form-control">
-      </div>
-      <button type="submit" class="btn btn-primary">Get Summary</button>
-    </form>
+    <h1>Briefly-AI</h1>
+    <p class="intro">Welcome to Briefly-AI, your personal assistant for summarizing email and Slack communications. Easily generate summaries and draft responses with just a few clicks. Let's get started!</p>
   
-    <div *ngIf="summary" class="summary mt-5">
-      <h2 class="text-center">Email Summary</h2>
-      <markdown [data]="emailSummary"></markdown>
+    <div class="section-container">
+      <div class="section">
+        <h2>Slack Details</h2>
+        <p class="description">Enter your Slack details to generate a summary of recent messages. This helps you quickly catch up on important conversations and updates.</p>
+        <form>
+          <div class="form-group">
+            <label for="slackUserToken">Slack User Token</label>
+            <input type="text" id="slackUserToken" [(ngModel)]="tokens.slackUserToken" name="slackUserToken" class="form-control">
+            <small class="form-text text-muted">Your personal Slack user token for accessing messages.</small>
+          </div>
+          <div class="form-group">
+            <label for="slackUserId">Slack User ID</label>
+            <input type="text" id="slackUserId" [(ngModel)]="tokens.slackUserId" name="slackUserId" class="form-control">
+            <small class="form-text text-muted">Your Slack user ID.</small>
+          </div>
+          <div class="form-group">
+            <label for="slackHours">Last Number of Hours</label>
+            <input type="number" id="slackHours" [(ngModel)]="hours" name="slackHours" class="form-control">
+            <small class="form-text text-muted">Specify the time range for summarizing Slack messages.</small>
+          </div>
+          <button type="button" class="btn btn-primary" (click)="getSlackSummary()">Get Slack Summary</button>
+        </form>
   
-      <h2 class="text-center mt-5">Slack Summary</h2>
-      <markdown [data]="slackSummary"></markdown>
+        <div class="summary-section" *ngIf="slackSummary">
+          <h2>Slack Summary</h2>
+          <markdown [data]="slackSummary"></markdown>
+        </div>
+      </div>
+  
+      <div class="section">
+        <h2>Email Details</h2>
+        <p class="description">Provide your Google email credentials to generate email summaries and draft responses. Stay on top of your inbox effortlessly.</p>
+        <form>
+          <div class="form-group">
+            <label for="googleClientId">Google Client ID</label>
+            <input type="text" id="googleClientId" [(ngModel)]="tokens.googleClientId" name="googleClientId" class="form-control">
+            <small class="form-text text-muted">Your Google Client ID for accessing emails.</small>
+          </div>
+          <div class="form-group">
+            <label for="googleClientSecret">Google Client Secret</label>
+            <input type="text" id="googleClientSecret" [(ngModel)]="tokens.googleClientSecret" name="googleClientSecret" class="form-control">
+            <small class="form-text text-muted">Your Google Client Secret for authentication.</small>
+          </div>
+          <div class="form-group">
+            <label for="googleRefreshToken">Google Refresh Token</label>
+            <input type="text" id="googleRefreshToken" [(ngModel)]="tokens.googleRefreshToken" name="googleRefreshToken" class="form-control">
+            <small class="form-text text-muted">Your Google Refresh Token to maintain session.</small>
+          </div>
+          <div class="form-group">
+            <label for="emailHours">Last Number of Hours</label>
+            <input type="number" id="emailHours" [(ngModel)]="hours" name="emailHours" class="form-control">
+            <small class="form-text text-muted">Specify the time range for summarizing emails.</small>
+          </div>
+          <button type="button" class="btn btn-primary" (click)="getEmailSummary()">Get Email Summary</button>
+          <button type="button" class="btn btn-secondary" (click)="draftResponseEmails()">Draft Response Emails</button>
+        </form>
+  
+        <div class="summary-section" *ngIf="emailSummary">
+          <h2>Email Summary</h2>
+          <markdown [data]="emailSummary"></markdown>
+        </div>
+  
+        <div class="summary-section" *ngIf="draftMessage">
+          <h2>Draft Response Emails</h2>
+          <p>{{ draftMessage }}</p>
+          <div *ngFor="let draft of draftSummary">
+            <p><strong>Subject:</strong> {{ draft.subject }}</p>
+            <p><strong>To:</strong> {{ draft.to }}</p>
+            <p><strong>Response:</strong> {{ draft.response }}</p>
+            <hr>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   
