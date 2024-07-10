@@ -13,13 +13,13 @@
 
 ## Description
 
-Briefly AI is a cutting-edge AI Assistant designed to streamline your communication management. Leveraging advanced AI models and APIs, Briefly AI generates concise summaries for emails and Slack messages, drafts intelligent email responses, and automates these tasks for continuous operation. The assistant uses credentials stored in a secure `.env` file and operates seamlessly to keep you updated.
+Briefly AI is a cutting-edge AI Assistant designed to streamline your communication management. Leveraging advanced AI models and APIs, Briefly AI generates concise summaries for emails and Slack messages, drafts intelligent email responses, and automates these tasks for continuous operation and convenience.
 
 ## Inspiration
 
 The inspiration for this AI Assistant came from my own struggle to keep up with the loads of emails and Slack messages I receive daily. As an undergraduate juggling classes, projects, and internships, I found myself spending way too much time trying to sift through endless threads of messages and emails. I thought, "There has to be a smarter way to handle this!"
 
-That's when I decided to harness the power of AI to help me out. I wanted something that could give me quick summaries and draft responses so I could focus on more important things—like coding, studying, or, let's be honest, binge-watching my favorite shows. This project was born out of a need for more efficiency and a desire to see how far I could push AI to make my life easier. Plus, it’s pretty cool to say you built an AI assistant. By the way, if you have read this far, let me tell you that this readme file was written by an LLM too.
+That's when I decided to harness the power of AI to help me out. I wanted something that could give me quick summaries and draft responses so I could focus on more important things—like coding, studying, or, let's be honest, binge-watching my favorite shows. This project was born out of a need for more efficiency and a desire to see how far I could push AI to make my life easier. By the way, if you have read this far, let me tell you that this readme file was written by an LLM too.
 
 ## Screenshots
 
