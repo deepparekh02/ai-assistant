@@ -7,7 +7,7 @@
 - [Inspiration](#inspiration)
 - [Technologies and Libraries](#technologies-and-libraries)
 - [Main Features](#main-features)
-- [Demo](#demo)
+- [Screenshots](#screenshots)
 - [How to Use](#how-to-use)
 - [Installation](#installation)
 
@@ -54,6 +54,8 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
 - **User-Friendly Interface:** A modern and sleek frontend built with Angular, providing an intuitive user experience.
 - **Multi-Platform Support:** Supports both email and Slack integrations, with future plans for additional platforms.
 - **Real-Time Updates:** Keeps you informed with real-time summaries and drafts, enhancing productivity and efficiency.
+
+## Screenshots
 
 ## How to Use
 
