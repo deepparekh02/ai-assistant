@@ -25,11 +25,11 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
 ## Technologies and Libraries
 
 - **Frontend Technologies:**
-  - Angular for a sleek and responsive user interface
-  - Ngx-Markdown for rendering Markdown content
+  - `Angular` for a sleek and responsive user interface
+  - `Ngx-Markdown` for rendering Markdown content
 - **Backend Technologies:**
-  - Python for robust backend operations
-  - Flask for a lightweight and efficient web framework
+  - `Python` for robust backend operations
+  - `Flask` for a lightweight and efficient web framework
 - **Google Cloud APIs for seamless integration and authentication:**
   - `google-auth`
   - `google-auth-oauthlib`
