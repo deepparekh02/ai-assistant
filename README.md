@@ -5,9 +5,9 @@
 ## Table of Contents
 - [Description](#description)
 - [Inspiration](#inspiration)
+- [Screenshots](#screenshots)
 - [Technologies and Libraries](#technologies-and-libraries)
 - [Main Features](#main-features)
-- [Screenshots](#screenshots)
 - [How to Use](#how-to-use)
 - [Installation](#installation)
 
@@ -20,6 +20,12 @@ Briefly AI is a cutting-edge AI Assistant designed to streamline your communicat
 The inspiration for this AI Assistant came from my own struggle to keep up with the loads of emails and Slack messages I receive daily. As an undergraduate juggling classes, projects, and internships, I found myself spending way too much time trying to sift through endless threads of messages and emails. I thought, "There has to be a smarter way to handle this!"
 
 That's when I decided to harness the power of AI to help me out. I wanted something that could give me quick summaries and draft responses so I could focus on more important things—like coding, studying, or, let's be honest, binge-watching my favorite shows. This project was born out of a need for more efficiency and a desire to see how far I could push AI to make my life easier. Plus, it’s pretty cool to say you built an AI assistant. By the way, if you have read this far, let me tell you that this readme file was written by an LLM too.
+
+## Screenshots
+
+<img width="500" alt="demo-1" src="https://github.com/deepparekh02/briefly-ai/assets/65657471/1867060e-71d5-4bb6-9c44-a93aa20b4869">
+<img width="500" alt="demo-2" src="https://github.com/deepparekh02/briefly-ai/assets/65657471/e18aa0e3-1631-4ac2-9e11-b091340133f5">
+
 
 ## Technologies and Libraries
 
@@ -54,8 +60,6 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
 - **User-Friendly Interface:** A modern and sleek frontend built with Angular, providing an intuitive user experience.
 - **Multi-Platform Support:** Supports both email and Slack integrations, with future plans for additional platforms.
 - **Real-Time Updates:** Keeps you informed with real-time summaries and drafts, enhancing productivity and efficiency.
-
-## Screenshots
 
 ## How to Use
 
