@@ -11,8 +11,9 @@ SLACK_USER_TOKEN = os.getenv('SLACK_USER_TOKEN')
 SLACK_USER_ID = os.getenv('SLACK_USER_ID')
 
 class SlackHandler:
-    def __init__(self):
-        self.client = WebClient(token=SLACK_USER_TOKEN)
+    def __init__(self, slack_user_id, slack_user_token):
+        self.client = WebClient(token=slack_user_token)
+        self.slack_user_id = slack_user_id
         
     def get_channels(self):
         try:
@@ -31,7 +32,7 @@ class SlackHandler:
                 channel=channel_id,
                 oldest=oldest_timestamp
             )
-            messages = [f"From {channel_name}: {message['text']}" for message in response['messages'] if 'text' in message and message['user'] != SLACK_USER_ID]
+            messages = [f"From {channel_name}: {message['text']}" for message in response['messages'] if 'text' in message and message['user'] != self.slack_user_id]
             return messages
         except SlackApiError as e:
             print(f"Error fetching messages: {e.response['error']}")
