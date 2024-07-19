@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.backendImage.repository }}
+spec:
+  selector:
+    app: {{ .Values.backendImage.repository }}
+  ports:
+    - protocol: {{ .Values.backendImage.protocol }}
+      port: {{ .Values.backendImage.port }}
+      targetPort: {{ .Values.backendImage.port }}
+  type: {{ .Values.service.type }}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.frontendImage.repository }}
+spec:
+  selector:
+    app: {{ .Values.frontendImage.repository }}
+  ports:
+    - protocol: {{ .Values.frontendImage.protocol }}
+      port: {{ .Values.frontendImage.port }}
+      targetPort: {{ .Values.frontendImage.port }}
+  type: {{ .Values.service.type }}

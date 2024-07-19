@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class SummaryService {
 
-  private slackSummaryUrl = 'http://127.0.0.1:5000/slack-summary';
-  private emailSummaryUrl = 'http://127.0.0.1:5000/email-summary';
-  private draftResponseEmailsUrl = 'http://127.0.0.1:5000/draft-response-emails';
+  private slackSummaryUrl = '/api/slack-summary';
+  private emailSummaryUrl = '/api/email-summary';
+  private draftResponseEmailsUrl = '/api/draft-response-emails';
 
   constructor(private http: HttpClient) { }
 
