@@ -11,7 +11,7 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/slack-summary', methods=['POST'])
+@app.route('/api/slack-summary', methods=['POST'])
 def get_slack_summary():
     data = request.json
     slack_user_token = data['SLACK_USER_TOKEN']
@@ -31,7 +31,7 @@ def get_slack_summary():
 
     return jsonify(summary)
     
-@app.route('/email-summary', methods=['POST'])
+@app.route('/api/email-summary', methods=['POST'])
 def get_email_summary():
     data = request.json
     google_client_id = data['GOOGLE_CLIENT_ID']
@@ -52,7 +52,7 @@ def get_email_summary():
     summary = {'email_summary': email_summary}
     return jsonify(summary)
 
-@app.route('/draft-response-emails', methods=['POST'])
+@app.route('/api/draft-response-emails', methods=['POST'])
 def draft_response_emails():
     data = request.json
     google_client_id = data['GOOGLE_CLIENT_ID']
@@ -90,4 +90,4 @@ def draft_response_emails():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

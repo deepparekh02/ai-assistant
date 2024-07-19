@@ -1,0 +1,25 @@
+backendImage:
+  repository: briefly-ai-backend
+  tag: latest
+  imagePullPolicy: Never
+  port: 5000
+  targetPort: 5000
+  protocol: TCP
+
+frontendImage:
+  repository: briefly-ai-frontend
+  tag: latest
+  imagePullPolicy: Never
+  port: 80
+  protocol: TCP
+
+service:
+  type: NodePort
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
