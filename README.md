@@ -47,6 +47,10 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
   - `google-generativeai` for state-of-the-art language models
 - **Communication Platform Integration:**
   - `slack-sdk` for Slack integration
+- **Containerization and Orchestration:**
+  - `Docker` for containerizing the application
+  - `Kubernetes` for deploying and managing containers
+  - `Nginx` for serving the frontend and proxying API requests
 - **Others:**
   - `requests` for handling HTTP requests
   - `flask-cors` for handling cross-origin requests
@@ -80,6 +84,10 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
 ### Prerequisites
 - Python 3.x
 - Node.js and npm (for the Angular frontend)
+- Docker and Docker Compose
+- Minikube (for Kubernetes)
+- kubectl (Kubernetes command-line tool)
+- Helm (Kubernetes package manager)
 
 ### Backend Setup
 1. Clone the repository:
@@ -116,5 +124,34 @@ That's when I decided to harness the power of AI to help me out. I wanted someth
     ng serve
     ```
 
+### Docker Setup
+
+1. Build and run the Docker containers using Docker Compose:
+    ```bash
+    docker-compose up --build
+    ```
+
+### Kubernetes Setup
+
+1. Start Minikube:
+    ```bash
+    minikube start
+    ```
+
+2. Enable Ingress in Minikube:
+    ```bash
+    minikube addons enable ingress
+    ```
+
+3. Deploy the application using Helm:
+    ```bash
+    cd ../k8s
+    helm install briefly-ai .
+    ```
+
 ### Accessing the Application
-Open your web browser and navigate to `http://localhost:4200` to access Briefly AI.
+1. Use the following command to get the URL for accessing the frontend:
+    ```bash
+    minikube service briefly-ai-frontend
+    ```
+2. Open your web browser and navigate to the provided URL to access Briefly AI.
